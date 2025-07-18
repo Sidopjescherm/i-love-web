@@ -8,7 +8,7 @@ const app = express()
 
 app.set('views', './views')
 
-app.use(express.static('public'))
+app.use(express.static('assets'))
 
 const engine = new Liquid();
 app.engine('liquid', engine.express()); 
