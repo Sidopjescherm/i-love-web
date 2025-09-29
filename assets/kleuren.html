@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <article>
+            <p>Bordeaux</p>
+            <p>Bordeaux</p>
+            <p>Bordeaux</p>
+            <p>Bordeaux</p>
+            <p>Bordeaux</p>
+        </article>
+    </body>
+    <!-- Artikel van Jen Simmons en kleuren veranderen in LCH, OL:CH, HWB en LAB -->
+</html>
+
+<style>
+    p{
+        font-size: xx-large;
+    }
+    p:nth-child(1) {
+        color: brown; 
+    }
+     p:nth-child(2) {
+        color: #800020;
+    }
+     p:nth-child(3) {
+        color: rgb(128 0 32);
+    }
+     p:nth-child(4) {
+        color: hsl(345 100 32);
+    }
+
+    p:nth-child(5) {
+        --h: 345;
+        --s: 100;
+        --l: 32;
+        color: hsl(var(--h) var(--s) var(--l));
+
+        &:hover {
+            --h: 200deg;
+            --s: 75;               
+            --l: 50;
+        }
+    }
+</style>
